@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.title{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:10px;
+	margin-bottom:10px;
+	text-align:center;
+	width:410px;
+	color:blue;
+	border:solid black 2px;
+	font-size:25px;
+	font-weight:bold;
+
+}
+input[type="button"]
+{
+	border-radius:10px;
+	background-color:red   ;
+	color:black;
+	border-color:#ff4456;
+	width:100px;
+	height:100px;
+	font-size:30px;
+
+}
+
+input[type="text"]
+{
+	border-radius:10px;
+	background-color:white;
+	text-align:right;
+	border-color:black;
+	width:310px;
+	height:100px;
+	font-size:30px;
+
+
+}
+#bu
+{
+	border-radius:50px;
+	background-color:red;
+	color:black;
+	border-color:#ff4456;
+	width:100px;
+	height:100px;
+	font-size:30px;
+	
+
+}
+
+
+</style>
+
+<script>
+	function dis(val)
+		{
+			document.getElementById("edu").value+=val;
+
+		}
+	function solve()
+		{
+			let x=document.getElementById("edu").value;
+			let y=eval(x);
+			document.getElementById("edu").value=y;
+
+
+
+		}
+	function clr()
+		{
+			document.getElementById("edu").value="";
+
+
+		}
+
+</script>
+
+
+</head>
+
+<body>
+
+<!--Create table-->
+
+<div class="title"><h2>Javascript Calculator</h2></div>
+
+<center>
+<table border="1">
+<tr>
+<td><input type="button" id="bu" value="c" onClick="clr()"/></td>
+<td colspan="3"><input type="text" id="edu"/></td>
+
+</tr>
+<tr>
+<td><input type="button" id="bu" value="+" onClick="dis('+')"/></td>
+<td><input type="button" value="1" onClick="dis('1')"/></td>
+<td><input type="button" value="2" onClick="dis('2')"/></td>
+<td><input type="button" value="3" onClick="dis('3')"/></td>
+
+</tr>
+<tr>
+<td><input type="button" id="bu" value="-" onClick="dis('-')"/></td>
+<td><input type="button" value="4" onClick="dis('4')"/></td>
+<td><input type="button" value="5" onClick="dis('5')"/></td>
+<td><input type="button" value="6" onClick="dis('6')"/></td>
+
+</tr>
+<tr>
+<td><input type="button" id="bu" value="*" onClick="dis('*')"/></td>
+<td><input type="button" value="7" onClick="dis('7')"/></td>
+<td><input type="button" value="8" onClick="dis('8')"/></td>
+<td><input type="button" value="9" onClick="dis('9')"/></td>
+
+</tr>
+<tr>
+<td><input type="button" id="bu" value="/" onClick="dis('/')"/></td>
+<td><input type="button" value="." onClick="dis('.')"/></td>
+<td><input type="button" value="0" onClick="dis('0')"/></td>
+<td><input type="button" value="=" onClick="solve()"/></td>
+
+</tr>
+
+
+</table>
+</center>
+
+</body>
+
+</html>
